@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+    <style>
+        .pop_up {
+            display: none;
+
+        }
+
+        .pop_down {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body class="p-3 mt-5">
+
+    <button onclick="myFunction()">Click me</button>
+    <button onclick="remove()">Remove</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            const demo1 = document.getElementById("demo").innerHTML = "Hello World";
+            console.log('hello');
+            
+        }
+        function remove(){
+            const demo1 = document.getElementById("demo").innerHTML = "";
+           
+
+        }
+    </script>
+
+
+</body>
+
+</html>

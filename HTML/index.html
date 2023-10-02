@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="SHORTCUT ICON" href="/Facebook Clone/assests/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css">
+    <title>Facebook-Login/Signup Page</title>
+    <style>
+        .pop_up {
+            display: block;
+            opacity: 1.5;
+            /* transform: translateY(20px); */
+        }
+        /* .pop_up{
+            di
+        } */
+
+        .pop_down {
+            display: block;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+
+<body class=" bg-gray-200">
+    <div class=" pop_down mobile_view bg-white mx-auto lg:hidden border border-gray-200 h-[450px] w-[420px] rounded-md">
+        <div class="h-10 top flex items-center space-x-2 bg-yellow-100">
+            <a href=""><img class="w-7" src="/Facebook Clone/assests/phone.svg"
+                    alt="Facebook Clone/assests/phone.svg"></a>
+            <a href="">
+                <p class="text-blue-800 text-sm font-semibold">Get Facebook for Andriod and browser faster.</p>
+            </a>
+        </div>
+        <div class="login mt-4  h-[380px]w-[200px]">
+            <img class="w-36 mx-28 items-center" src="/Facebook Clone/assests/fb.svg"
+                alt="Facebook Clone/assests/fb.svg">
+            <input class="w-96 my-2 mx-4 px-5 py-2.5 border border-1 outline-blue-600 border-gray-200 rounded-lg"
+                type="text" name="" id="" placeholder="Mobile number or email address">
+            <input class="w-96 my-2 mx-4 px-5 py-2.5 border border-1 outline-blue-600 border-gray-200 rounded-lg"
+                type="password" placeholder="Password">
+            <button
+                class="my-3 mx-12 px-2 w-80 py-2 text-white font-bold rounded-md bg-blue-600 cursor-pointer hover:bg-blue-700">Login</button>
+            <span class="my-3 text-center mx-32"><a href="forget_page.html"
+                    class="text-blue-500 hover:underline ">Forgotten
+                    password?</a></span>
+            <span class="flex items-center mx-12 ">______________________
+                <hr>
+                <hr>or
+                <hr>_________________________
+            </span>
+            <button onclick="pop_open()"
+                class="popopen my-3 mx-12 px-2 w-72 py-2 text-black font-semibold rounded-md cursor-pointer border">Create
+                new account</button>
+
+        </div>
+    </div>
+
+    <div
+        class="hidden pop_down lg:block lg:flex mt-14 md:mt-44  flex-col space-y-10 md:flex-row  md:justify-center ml-24 md:ml-24">
+        <div class="ml-10 mt-24">
+            <img class="w-52" src="/Facebook Clone/assests/fb.svg" alt="fb_logo">
+            <p class="w-72 md:w-1/2 text-2xl mx-5">Facebook helps you connect and share with the people in your life.
+            </p>
+        </div>
+        <div class="flex flex-col bg-white border mr-14 rounded-lg relative w-96 h-auto">
+            <input class="my-3 mx-4 px-5 py-3 w-72 border border-1 outline-blue-600 border-gray-200 rounded-lg"
+                type="text" placeholder="Email address or phone number">
+            <input class="my-3 mx-4 px-5 py-3 border border-1 outline-blue-600 border-gray-200 rounded-lg"
+                type="password" placeholder="Password">
+            <button
+                class="my-3 mx-4 px-2 py-2 text-white font-bold rounded-md bg-blue-600 cursor-pointer hover:bg-blue-700">Log
+                In</button>
+            <span class="my-3 mx-4 text-center"><a href="forget_page.html"
+                    class="text-blue-500 hover:underline">Forgotten
+                    password?</a></span>
+            <hr class="my-3 mx-4 border-solid 1 border-black">
+            <button onclick="pop_open()"
+                class=" popopen my-3 px-2 py-2 text-white font-bold rounded-md bg-green-600 cursor-pointer hover:bg-green-700 w-fit text-center mx-auto">Create
+                new account</button>
+            <span class="absolute -bottom-10 text-sm mx-2"><span><a href="#"
+                        class="text-black font-bold hover:underline">Create a Page</a></span> for a
+                celebrity, brand or business.</span>
+        </div>
+    </div>
+    <div class="pop_up" id="popup hidden lg:block ">
+        <div class="button-blur">
+            <div id="popup" class="bg-white w-[450px] h-[550px] ml-[20%] mt-[10%] rounded-lg">
+                <div class="top flex justify-between mx-2">
+                    <div class="p_tag p-2">
+                        <h1 class="text-2xl font-bold">Sign Up</h1>
+                        <p class="text-gray-500">it's quick and easy.</p>
+                    </div><img onclick="remove()" class="w-9 h-9" id="X_btn" src="/Facebook Clone/assests/X.svg" alt="">
+                </div>
+                <hr>
+                <hr>
+                <div class="login_details">
+                    <input class="mx-2 my-2 p-2 bg-gray-100 border-2 outline-blue-600 border-gray-200 rounded-md"
+                        type="text" placeholder="First name">
+                    <input class="mx-2 my-2 p-2 bg-gray-100 border-2 outline-blue-600 border-gray-200 rounded-md"
+                        type="text" placeholder="Surname">
+                </div>
+                <input class="mx-2 my-2 p-2 bg-gray-100 border-2 outline-blue-600 border-gray-200 rounded-md w-[27rem]"
+                    type="text" name="" id="" placeholder="Mobile number or email address"><br>
+                <input class="mx-2 my-2 p-2 bg-gray-100 border-2 outline-blue-600 border-gray-200 rounded-md w-[27rem]"
+                    type="password" name="" id="" placeholder="New Password">
+                <div class="dob mt-2 space-x-3">
+                    <p class="mx-4 my-1 text-xs">Date of birth</p>
+                    <select class=" mx-3 px-10 py-2 rounded-md bg-white border" id="arrayDropdown"></select>
+                    <script>
+                        var arr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"];
+                        var options = "";
+                        arr.map((op, i) => {
+                            options += `<option value="${op}" id="${i}" style="border-radius: 5px;"">${op}</option>`
+                        })
+                        document.getElementById("arrayDropdown").innerHTML = options;
+                    </script>
+                    <select class=" mx-3 px-10 py-2 rounded-md bg-white border" id="array1Dropdown" Q></select>
+                    <script>
+                        var arr = ["Jan", "Feb", "Mar", "Feb", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                        var options = "";
+                        arr.map((op, i) => {
+                            options += `<option value="${op}" id="${i}" style="border-radius: 5px;"">${op}</option>`
+                        })
+                        document.getElementById("array1Dropdown").innerHTML = options;
+                    </script>
+                    <select class=" mx-3 px-10 py-2 rounded-md bg-white border" id="array2Dropdown"></select>
+                    <script>
+                        var arr = ["1995",
+                            "1996",
+                            "1997",
+                            "1998",
+                            "1999",
+                            "2000",
+                            "2001",
+                            "2002",
+                            "2003",
+                            "2004",
+                            "2005",
+                            "2006",
+                            "2007",
+                            "2008",
+                            "2009",
+                            "2010",
+                            "2011",
+                            "2012",
+                            "2013",
+                            "2014",
+                            "2015",
+                            "2016",
+                            "2017",
+                            "2018",
+                            "2019",
+                            "2020",
+                            "2021",
+                            "2022",
+                            "2023"];
+                        var options = "";
+                        arr.map((op, i) => {
+                            options += `<option value="${op}" id="${i}" style="border-radius: 5px;"">${op}</option>`
+                        })
+                        document.getElementById("array2Dropdown").innerHTML = options;
+                    </script>
+                </div>
+                <p class="mt-2 mx-3 text-xs">Gender</p>
+                <div class="gender flex mt-1 space-x-2">
+                     <div class=" mx-3 px-7 py-2 rounded-md bg-white border"><label for="male">Male</label>
+                        <input type="radio" id="Male" name="fav_language" value="Male"><br>
+                    </div>
+                    <div class=" mx-3 px-7 py-2 rounded-md bg-white border"><label for="female">Female</label>
+                        <input type="radio" id="Female" name="fav_language" value="Female"><br>
+                    </div>
+                    <div class=" mx-3 px-7 py-2 rounded-md bg-white border"><label for="custom">Custom</label>
+                        <input type="radio" id="Custom" name="fav_language" value="Custom"><br>
+                    </div>
+
+                </div>
+                <div class="text text-xs mx-3 mt-3 space-y-2">
+                    <p class="w-auto">People who use our service may have uploaded your contact information to
+                        Facebook.
+                        <span class="text-blue-500 hover:underline">Learn more</span>
+                    </p>
+                    <p> By clicking Sign Up, you agree to our <span class="text-blue-500 hover:underline">Terms,
+                        </span><span class="text-blue-500 hover:underline">Privacy Policy</span> and <span
+                            class="text-blue-500  hover:underline">Cookies Policy.</span> You may receive SMS
+                        notifications
+                        from us and can opt out at any time.</p>
+                </div>
+                <div class="btn flex justify-center">
+                    <button class="bg-green-500 px-20 py-1.5 text-white font-bold rounded-lg mt-5">Sign Up</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js"></script>
+
+    <script>
+        function pop_open() {
+            const popup = document.querySelector('.pop_up');
+            const popdown = document.querySelector('.pop_down');
+            console.log('hello');
+            popup.classList.toggle("pop_up");
+            
+        }
+        popdown.classList.toggle("pop_down");
+        function remove() {
+            const show = document.querySelector(".pop_up");
+            show.remove()
+            popup.classList.toggle("pop_up");
+            
+        }
+        popdown.classList.toggle("pop_down");
+
+
+    </script>
+</body>
+
+</html>
